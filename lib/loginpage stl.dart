@@ -40,6 +40,7 @@ class LoginPage extends StatelessWidget{
                 hintText: "Username",
                 labelText:"Username",
                 helperText: "Username must be an email id",
+                prefixIcon: Icon(Icons.account_circle),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 )
@@ -51,6 +52,7 @@ class LoginPage extends StatelessWidget{
                   labelText:"Password",
                   hintText: "Password",
                   helperText: "Create a strong password",
+                  prefixIcon: Icon(Icons.lock_person),
                   border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 )
