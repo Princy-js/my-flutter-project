@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:new_flutter_project_class/homepage.dart';
 
 // void main(){
 //   runApp(
@@ -10,6 +11,11 @@ import 'package:google_fonts/google_fonts.dart';
 // }
 
 class LoginPage extends StatelessWidget{
+  String username = "admin@gmail.com";
+  String password = "admin123";
+
+  final uname_controller = TextEditingController();
+  final pass_controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +23,7 @@ class LoginPage extends StatelessWidget{
         title: Text("Login Page"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding:  EdgeInsets.all(18.0),
         child: Column(
           children: [
             Image.asset(
@@ -26,7 +32,7 @@ class LoginPage extends StatelessWidget{
               height: 130,
             ),
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding:  EdgeInsets.all(18.0),
               child: Text("My App",
               style: GoogleFonts.cabinSketch(
                 fontSize: 35,
@@ -36,6 +42,7 @@ class LoginPage extends StatelessWidget{
               ),
             ),
             TextField(
+            controller: uname_controller,
               decoration: InputDecoration(
                 hintText: "Username",
                 labelText:"Username",
@@ -48,6 +55,9 @@ class LoginPage extends StatelessWidget{
             ),
             SizedBox(height: 20,),
             TextField(
+              obscureText: true,
+              obscuringCharacter: "*",
+              controller: pass_controller,
               decoration: InputDecoration(
                   labelText:"Password",
                   hintText: "Password",
@@ -59,8 +69,15 @@ class LoginPage extends StatelessWidget{
               ),
             ),
             SizedBox(height: 20,),
-            ElevatedButton(onPressed: (){} , child: Text("Login")),
-            TextButton(onPressed: (){}, child:Text("Not a user ? login Here!"))
+            ElevatedButton(onPressed: (){
+              if(username == uname_controller.text && password == pass_controller.text){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+              }
+              else{
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Invalid username/password  or the fields are empty")));
+              }
+            } , child: Text("Login")),
+            TextButton(onPressed: (){}, child:Text("Not a user ? register Here!"))
           ],
         ),
       ),
