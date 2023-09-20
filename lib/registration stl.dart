@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class Rgistration extends StatelessWidget{
+class Registration extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +11,13 @@ class Rgistration extends StatelessWidget{
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Text("Register here!"),
+            Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: Text("Register here!",
+              style: GoogleFonts.abyssinicaSil(fontSize: 30,),
+              ),
+            ),
+            SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 hintText: "name",
@@ -20,6 +27,7 @@ class Rgistration extends StatelessWidget{
                 )
               ),
             ),
+            SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 hintText: "Phone",
@@ -29,6 +37,7 @@ class Rgistration extends StatelessWidget{
                 )
               ),
             ),
+            SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 hintText: "username",
@@ -38,6 +47,7 @@ class Rgistration extends StatelessWidget{
                 )
               ),
             ),
+            SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 hintText: "password",
@@ -47,6 +57,7 @@ class Rgistration extends StatelessWidget{
                 )
               ),
             ),
+            SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 hintText: "Re-enter password",
@@ -56,6 +67,7 @@ class Rgistration extends StatelessWidget{
                 )
               ),
             ),
+            SizedBox(height: 20),
             ElevatedButton(onPressed: (){
 
             }, child: Text("Register"),)
