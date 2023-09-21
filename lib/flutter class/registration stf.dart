@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_flutter_project_class/homepage.dart';
+import 'package:new_flutter_project_class/flutter%20class/homepage.dart';
 
 
 class Registration2 extends StatefulWidget{
