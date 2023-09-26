@@ -11,6 +11,8 @@ class Registration2 extends StatefulWidget{
 class _Registration2State extends State<Registration2> {
   final formkey = GlobalKey<FormState>(); //state monitoring of all fields
   String? pass;
+  bool passwordhidden = true; //this means password hidden
+  bool cnfmpasswordhidden = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +44,7 @@ class _Registration2State extends State<Registration2> {
               ),
               SizedBox(height: 20),
               TextFormField(
+
                 decoration: InputDecoration(
                     hintText: "username",
                     labelText: "username",
@@ -80,13 +83,29 @@ class _Registration2State extends State<Registration2> {
               SizedBox(height: 20),
 
               TextFormField(
+                obscureText:passwordhidden ,
+                obscuringCharacter: "*",
                 decoration: InputDecoration(
+                  suffixIcon: IconButton(
+                      onPressed: (){
+                        setState(() {
+                          if(passwordhidden == true){
+                            passwordhidden = false;
+                          }
+                          else{
+                            passwordhidden = true;
+                          }
+                        });
+                      },
+                      icon: Icon(passwordhidden == true ?
+                      Icons.visibility_off :Icons.visibility)),
                     hintText: "password",
                     labelText: "password",
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(50))
                     )
                 ),
+
                 validator: (password){
                   pass = password;
                   if(password!.isEmpty || password.length < 6){
@@ -99,7 +118,23 @@ class _Registration2State extends State<Registration2> {
               ),
               SizedBox(height: 20),
               TextFormField(
+                obscureText:cnfmpasswordhidden ,
+                obscuringCharacter: "*",
                 decoration: InputDecoration(
+                  suffixIcon: IconButton(
+                      onPressed: (){
+                        setState(() {
+                          if(cnfmpasswordhidden == true){
+                            cnfmpasswordhidden = false;
+                          }
+                          else{
+                            cnfmpasswordhidden = true;
+                          }
+                        });
+                      },
+                      icon: Icon(cnfmpasswordhidden == true?
+                      Icons.visibility_off
+                      :Icons.visibility)),
                     hintText: "Re-enter password",
                     labelText: "password confirmation",
                     border: OutlineInputBorder(

@@ -12,6 +12,7 @@ class LoginPage2 extends StatefulWidget {
 class _LoginPage2State extends State<LoginPage2> {
   String username = "admin@gmail.com";
   String pswd = "admin123";
+  bool passwordhidden = true;
   final key1 = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -53,6 +54,8 @@ class _LoginPage2State extends State<LoginPage2> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  obscureText: passwordhidden,
+                  obscuringCharacter: "*",
                   validator: (password){
                     if(password!.isEmpty || pswd != password){
                       return'Password must not be empty / password length must be >6';
@@ -61,6 +64,19 @@ class _LoginPage2State extends State<LoginPage2> {
                     }
                   },
                   decoration: InputDecoration(
+                    suffixIcon: IconButton(onPressed: (){
+                      setState(() {
+                        if(passwordhidden == true){
+                          passwordhidden = false;
+                        }
+                        else{
+                          passwordhidden = false;
+                        }
+                      });
+                    }
+                        , icon: Icon(passwordhidden ==true?
+                        Icons.visibility_off_sharp
+                        :Icons.visibility)),
                       hintText: "password",
                       labelText: "password",
                       border: OutlineInputBorder(
