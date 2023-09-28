@@ -59,7 +59,7 @@ class ListView3 extends StatelessWidget {
             subtitle: Text('${subtitle[index]}'),
             leading:Image.asset(images[index]),
             // trailing:Icon(icons[index]),
-            trailing: Icon(Icons.shopping_cart_outlined),
+            trailing: Icon(Icons.shopping_cart_outlined,),
           ),
         )),
       ),

@@ -33,19 +33,16 @@ class ListView1 extends StatelessWidget {
               children: [
                 Text("10.10"),
                 CircleAvatar(
-                  minRadius: 5,
                   maxRadius: 10,
-                  backgroundColor: Colors.teal,
-                  child: Text("3"),
-                )
+                    minRadius: 5,
+                    child: Text("3"))
               ],
             ),
           )),
           Card(
               child: ListTile(
             leading: CircleAvatar(
-              backgroundImage: AssetImage(
-                  "assets/images/pexels-vlada-karpovich-4668537.jpg"),
+              backgroundImage: AssetImage("assets/images/pexels-vlada-karpovich-4668537.jpg"),
             ),
             title: Text("Product2"),
             subtitle: Text("This is a simple subtitle"),
@@ -54,11 +51,9 @@ class ListView1 extends StatelessWidget {
               children: [
                 Text("9.45"),
                 CircleAvatar(
-                  maxRadius: 5,
-                  minRadius: 10,
-                  backgroundColor: Colors.teal,
-                  child: Text("2"),
-                )
+                  maxRadius: 10,
+                    minRadius: 5,
+                    child: Text("2"))
               ],
             ),
           )),
@@ -70,18 +65,7 @@ class ListView1 extends StatelessWidget {
             ),
             title: Text("Product3"),
             subtitle: Text("this is a sample"),
-            trailing: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("7.01"),
-                CircleAvatar(
-                  minRadius: 5,
-                  maxRadius: 10,
-                  backgroundColor: Colors.teal,
-                  child: Text("3"),
-                )
-              ],
-            ),
+            trailing: Text("7.01"),
           )),
           Card(
               child: ListTile(
@@ -91,9 +75,7 @@ class ListView1 extends StatelessWidget {
             ),
             title: Text("Product4"),
             subtitle: Text("This is a sample text"),
-            trailing: Column(mainAxisSize: MainAxisSize.min, children: [
-              Text("5.13"),
-            ]),
+            trailing: Text("5.13"),
           )),
           Card(
               child: ListTile(
@@ -103,18 +85,7 @@ class ListView1 extends StatelessWidget {
             ),
             title: Text("Product5"),
             subtitle: Text("hello"),
-            trailing: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("3.22"),
-                CircleAvatar(
-                  minRadius: 5,
-                  maxRadius: 10,
-                  backgroundColor: Colors.teal,
-                  child: Text("1"),
-                )
-              ],
-            ),
+            trailing: Text("3.22"),
           )),
           Card(
               child: ListTile(
@@ -126,11 +97,9 @@ class ListView1 extends StatelessWidget {
               children: [
                 Text("3.00"),
                 CircleAvatar(
-                  minRadius: 10,
-                  maxRadius: 10,
-                  backgroundColor: Colors.teal,
-                  child: Text("13"),
-                )
+                  minRadius: 5,
+                    maxRadius: 10,
+                    child: Text("13"))
               ],
             ),
           )),
