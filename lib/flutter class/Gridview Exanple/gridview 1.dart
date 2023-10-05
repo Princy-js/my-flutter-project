@@ -15,22 +15,21 @@ class GridView1 extends StatelessWidget {
         title: Text("Gridview1"),
       ),
       body: GridView(
-      //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      //         crossAxisCount: 3),
-      // children: List.generate(27,
-      //         (index) => Card(
-      //           color: Colors.primaries[index % Colors.primaries.length],
-      //           child: Icon(Icons.accessibility_outlined),
-      //         )),
-      //
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3),
+      children: List.generate(27,
+              (index) => Card(
+                color: Colors.primaries[index % Colors.primaries.length],
+                child: Icon(Icons.accessibility_outlined),
+              )),
 
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 120),
-             children: List.generate(27,
-                    (index) => Card(
-             color: Colors.primaries[index % Colors.primaries.length],
-             child: Icon(Icons.accessibility_outlined),
-    )
-    ),
+
+    //     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 120),
+    //          children: List.generate(27,
+    //                 (index) => Card(
+    //          color: Colors.primaries[index % Colors.primaries.length],
+    //          child: Icon(Icons.accessibility_outlined),
+
     )
     );
   }
