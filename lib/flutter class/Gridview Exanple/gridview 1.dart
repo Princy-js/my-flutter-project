@@ -17,6 +17,8 @@ class GridView1 extends StatelessWidget {
       body: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3),
+        shrinkWrap: true,
+        physics: ClampingScrollPhysics(),
       children: List.generate(27,
               (index) => Card(
                 color: Colors.primaries[index % Colors.primaries.length],
