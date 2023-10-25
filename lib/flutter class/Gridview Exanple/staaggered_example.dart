@@ -16,7 +16,7 @@ class Stagg_GridEx extends StatelessWidget{
             crossAxisCount: 4,
             mainAxisSpacing: 10,
            crossAxisSpacing: 10,
-          children: [
+          children: const [
             StaggeredGridTile.count(
                 crossAxisCellCount: 3,
                 mainAxisCellCount: 1,
