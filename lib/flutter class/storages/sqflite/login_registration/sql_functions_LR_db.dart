@@ -24,6 +24,15 @@ class Sql_operations{
     final id = db.insert('user', data);
     return id;
   }
+
+  static Future<List<Map>>LoginCheck(String email, String password) async{
+    final db = await Sql_operations.OpenDb();
+    final data = await db.rawQuery( "SELECT * FROM user WHERE email= '$email' AND password = '$password' ");
+    if (data.isNotEmpty) {
+      return data;
+    }
+    return data;
+  }
   
 
 }

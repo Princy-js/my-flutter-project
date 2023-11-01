@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:new_flutter_project_class/flutter%20class/storages/sqflite/login_registration/sqflitelogin.dart';
 import 'package:new_flutter_project_class/flutter%20class/storages/sqflite/login_registration/sql_functions_LR_db.dart';
@@ -13,6 +11,18 @@ class Registration_Form extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void Addnewuser(String name, String email, String password) async {
+      var id = await Sql_operations.AddnewUser(name, email, password);
+      if (id != null) {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(
+            builder: (context) => Login_Form()));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content:
+            Text('Registration not Successful')));
+      }
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
@@ -145,19 +155,6 @@ class Registration_Form extends StatelessWidget {
             )),
       ),
     );
-  }
-
-  void Addnewuser(String name, String email, String password) async {
-    var id = await Sql_operations.AddnewUser(name, email, password);
-    if (id != null) {
-      Navigator.pushReplacement(
-          context as BuildContext, MaterialPageRoute(
-          builder: (context) => Login_Form()));
-    } else {
-      ScaffoldMessenger.of(context as BuildContext).showSnackBar(
-          const SnackBar(content:
-          Text('Registration not Successful')));
-    }
   }
 }
 
