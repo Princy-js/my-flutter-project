@@ -12,7 +12,7 @@ class Product_Details extends StatelessWidget {
 
     //product list oro map um products il varum , previous page le tap cheytha id, ee id kk matching
     //aaya id product list il undonn check cheyum , undengil aa single map products il store cheyum
-    var products = product.firstWhere((products) => products["id"] == id);
+    var hello = product.firstWhere((hello) => hello["id"] == id);
 
     return Scaffold(
          appBar: AppBar(
@@ -21,12 +21,11 @@ class Product_Details extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image.network(products['images'],width: 200,height: 200,),
-            Text(products['name'],style: TextStyle(fontSize: 30),),
-            Text('${products['price']}\$',style: TextStyle(fontSize: 25),),
-            Text('${products['rating']}',style: TextStyle(fontSize: 20),),
-            Text(products['description'],style: TextStyle(fontSize: 15),)
-            
+            Image.network(hello['images'],width: 150,height: 150,),
+            Text(hello['name'],style: TextStyle(fontSize: 30),),
+            Text('${hello['price']}\$',style: TextStyle(fontSize: 25),),
+            Text('${hello['rating']}',style: TextStyle(fontSize: 20),),
+            Text(hello['description'],style: TextStyle(fontSize: 15),)
           ],
         ),
       ),

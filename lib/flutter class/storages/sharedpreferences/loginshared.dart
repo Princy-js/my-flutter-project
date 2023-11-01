@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:new_flutter_project_class/flutter%20class/storages/homeshared.dart';
-import 'package:new_flutter_project_class/flutter%20class/storages/registration.dart';
+import 'package:new_flutter_project_class/flutter%20class/storages/sharedpreferences/homeshared.dart';
+import 'package:new_flutter_project_class/flutter%20class/storages/sharedpreferences/registration.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

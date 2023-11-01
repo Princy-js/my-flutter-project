@@ -32,7 +32,7 @@ class Product_main extends StatelessWidget {
                  ///OR
                  // Navigator.of(context).pushNamed('details',arguments: products["id"])
                  child: Container(
-                   height: 200,
+                   height: 150,
                    decoration: BoxDecoration(
                      image: DecorationImage(
                          fit: BoxFit.contain,
