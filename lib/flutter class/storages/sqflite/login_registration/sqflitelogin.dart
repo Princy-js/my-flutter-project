@@ -23,7 +23,7 @@ class _Login_FormState extends State<Login_Form> {
 
       if (data.isNotEmpty) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => HomePageSQL(data: data,)));
+            MaterialPageRoute(builder: (context) => HomePageSQL(datas: data,)));
       }
       else if (data.isEmpty) {
         Navigator.pushReplacement(

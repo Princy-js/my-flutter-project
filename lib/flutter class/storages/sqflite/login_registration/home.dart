@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomePageSQL extends StatelessWidget {
-  final data;
+  final datas;
 
-  const HomePageSQL({Key? key, required this.data}) : super(key: key);
+  const HomePageSQL({Key? key, required this.datas}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var name = data[0]['name'];
+    var name = datas[0]['name'];
     return Scaffold(
       body: Center(
         child: Column(
