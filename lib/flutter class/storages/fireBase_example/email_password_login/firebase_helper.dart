@@ -16,8 +16,14 @@ class FireBase_helper {
       );
       return null; //return null if registration is success
     } on FirebaseAuthException catch (e) {
-      return e.message; //return error message if user registration is not success
-      //   if (e.code == 'weak-password') {
+      if (e.code == 'weak-password') {
+        return e.message;
+      }
+    }
+  }
+      //return error message if user registration is not success
+
+     // if (e.code == 'weak-password') {
       //     print('The password provided is too weak.');
       //   } else if (e.code == 'email-already-in-use') {
       //     print('The account already exists for that email.');
@@ -25,8 +31,7 @@ class FireBase_helper {
       // } catch (e) {
       //   print(e);
       // }
-    }
-  }
+
 
 //login user
   Future<String?> loginUser(

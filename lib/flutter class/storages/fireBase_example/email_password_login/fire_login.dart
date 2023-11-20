@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:new_flutter_project_class/flutter%20class/storages/fireBase_example/email_password_login/fire_home.dart';
 import 'package:new_flutter_project_class/flutter%20class/storages/fireBase_example/email_password_login/fire_registration.dart';
-
 import 'firebase_helper.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
+    ///google service file il oauth client il details onnum illengil manually evade add cheyth kodukkanam
     options: FirebaseOptions(
         apiKey: 'AIzaSyCkMmTdNtDOsIIYsEy2ryKAqYi8FnHI98Q',
         appId: '1:594394372620:android:0f6c91c5101419b528ac29',
